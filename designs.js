@@ -39,6 +39,11 @@ function makeGrid(event) {
         }
     })
 
+    $("#pixelCanvas").on("click", "td", function () {
+        $(this).css("background-color", $("#colorPicker").val());
+        statePressed = false;
+    })
+
     // toggling paint mode
     $("body").on("mouseup", function () {
         statePressed = false;
@@ -47,6 +52,8 @@ function makeGrid(event) {
     $("body").on("mousedown", function () {
         statePressed = true;
     });
+
+
 
 
 
